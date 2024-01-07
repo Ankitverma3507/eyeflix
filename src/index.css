@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.rowPosters::-webkit-scrollbar{
+    display: none;
+}
+
+.rowPosterlarge{
+    max-height: 250px;
+}
+
+*{
+    background-color: black;
+}
