@@ -50,9 +50,8 @@ function Banner() {
         </div>
         {/* description */}
         <h1 className='bannerdescription text-[0.8rem] w-[45rem] pt-[1rem] leading-5 max-w-[360px] h-[80px]'>{truncate(movie?.overview,150)}</h1>
-        <div className="bannerFadebottom "/>
     </div>
-        
+    <div className="bannerFadebottom "/>
     </header>
   )
 }
