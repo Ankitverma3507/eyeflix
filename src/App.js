@@ -3,11 +3,13 @@ import React from "react"
 import Row from "./components/Row"
 import request from "./components/request"
 import Banner from "./components/Banner"
+import Nav from "./components/Nav"
 
 export default function App(){
   return (
-    <div className="App">
+    <div className="App bg-[#111]">
       {/* <Name /> */}
+      <Nav />
       <Banner />
       <Row title="NETFLIX ORIGINAL" fetchURL={request.fetchNetflixOriginals} isLargerow/>
       <Row title="Trending Now" fetchURL={request.fetchTrending}/>
