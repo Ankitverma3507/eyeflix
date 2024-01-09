@@ -44,10 +44,10 @@ function Row({title, fetchURL, isLargerow}) {
     }
   }
   return (
-    <div className='row text-white p-2'>
+    <div className='row text-white p-2 overflow-hidden'>
             <h2>{title}</h2>
 
-            <motion.div className="rowPosters flex overflow-x-auto overscroll-x-auto overflow-y-hidden p-4"
+            <motion.div className="rowPosters flex overflow-x-auto overscroll-x-auto overflow-y-hidden p-4  "
               whileHover={{scale:1.1, originX:0 }}
               transition={{type: 'spring', stiffness: 50}}
             >
