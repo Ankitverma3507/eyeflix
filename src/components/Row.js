@@ -2,6 +2,7 @@ import React,{useState, useEffect} from 'react'
 import axios from "./axios"
 import YouTube from 'react-youtube';
 import movieTrailer from 'movie-trailer';
+import { motion } from "framer-motion"
 
 function Row({title, fetchURL, isLargerow}) {
 
@@ -43,10 +44,13 @@ function Row({title, fetchURL, isLargerow}) {
     }
   }
   return (
-    <div className='row text-white'>
+    <div className='row text-white p-2'>
             <h2>{title}</h2>
 
-            <div className="rowPosters flex overflow-x-auto overscroll-x-auto overflow-y-hidden p-4">
+            <motion.div className="rowPosters flex overflow-x-auto overscroll-x-auto overflow-y-hidden p-4"
+              whileHover={{scale:1.1, originX:0 }}
+              transition={{type: 'spring', stiffness: 50}}
+            >
               {movies.map(movie=>(
                 <img 
                 key={movie.id}
@@ -55,7 +59,7 @@ function Row({title, fetchURL, isLargerow}) {
                 src={`${baseURL}${isLargerow?movie.poster_path: movie.backdrop_path}`} 
                 alt={movie.name} />
               ))}
-            </div>
+            </motion.div>
             {trailerURL && <YouTube videoId={trailerURL} opts={opts} />}
     </div>
   )
